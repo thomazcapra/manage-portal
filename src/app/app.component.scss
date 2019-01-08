@@ -1,0 +1,26 @@
+.main-component {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .tool-bar {
+    &__image {
+      height: 2rem;
+      margin-right: 3rem;
+    }
+  }
+
+  .side-nav {
+    display: flex;
+    flex-grow: 1;
+
+    &__side-bar {
+      box-shadow: 3px 3px 13px #afeeee;
+      padding: 0 1rem;
+    }
+    &__content {
+      flex-grow: 1;
+      padding: 2rem;
+    }
+  }
+}
