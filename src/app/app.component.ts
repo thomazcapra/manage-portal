@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-export interface Section {
-  name: string;
-  updated: Date;
-}
+import { ApiService } from '@portal/services';
 
 @Component({
   selector: 'app-root',
@@ -11,29 +7,5 @@ export interface Section {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  folders: Section[] = [
-    {
-      name: 'Photos',
-      updated: new Date('1/1/16')
-    },
-    {
-      name: 'Recipes',
-      updated: new Date('1/17/16')
-    },
-    {
-      name: 'Work',
-      updated: new Date('1/28/16')
-    }
-  ];
-  notes: Section[] = [
-    {
-      name: 'Vacation Itinerary',
-      updated: new Date('2/20/16')
-    },
-    {
-      name: 'Kitchen Remodel',
-      updated: new Date('1/18/16')
-    }
-  ];
-  F;
+  constructor(private apiService: ApiService) {}
 }
