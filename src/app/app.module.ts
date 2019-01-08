@@ -10,6 +10,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SharedModule } from './core/shared.module';
+import { CommonModule } from '@angular/common';
 
 const MATERIAL_MODULES = [
   MatListModule,
@@ -26,6 +28,7 @@ const MATERIAL_MODULES = [
     FormsModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    SharedModule,
     ...MATERIAL_MODULES
   ],
   exports: [...MATERIAL_MODULES],

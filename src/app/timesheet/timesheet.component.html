@@ -1,3 +1,41 @@
-<p>
-  timesheet works!
-</p>
+<form [formGroup]="form">
+  <div class="row">
+    <app-input
+      [placeholder]="'Informe as horas'"
+      [type]="'email'"
+      [label]="'Hora Normal'"
+      class="col-md-6"
+    >
+    </app-input>
+    <app-input
+      [placeholder]="'Email'"
+      [type]="'email'"
+      [label]="'Hora Extra'"
+      class="col-md-6"
+    >
+    </app-input>
+  </div>
+  <div class="row">
+    <app-input
+      [placeholder]="'Email'"
+      [type]="'email'"
+      [label]="'Projeto'"
+      class="col-md-12"
+    >
+    </app-input>
+    <app-input
+      [placeholder]="'Email'"
+      [type]="'email'"
+      [label]="'Tarefa'"
+      class="col-md-12"
+    >
+    </app-input>
+    <app-input
+      [placeholder]="'Email'"
+      [type]="'email'"
+      [label]="'Observações'"
+      class="col-md-12"
+    >
+    </app-input>
+  </div>
+</form>
