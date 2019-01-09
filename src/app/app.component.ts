@@ -61,7 +61,7 @@ export class AppComponent implements OnDestroy {
     private apiService: ApiService,
     private navigationSerice: NavigationService
   ) {
-    this.selected = 0;
+
   }
 
   public ngOnDestroy(): void {}
