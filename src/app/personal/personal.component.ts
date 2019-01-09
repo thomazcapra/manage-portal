@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-personal',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./personal.component.scss']
 })
 export class PersonalComponent implements OnInit {
+  form = new FormGroup({});
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

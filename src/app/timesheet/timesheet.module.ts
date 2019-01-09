@@ -4,6 +4,7 @@ import { TimesheetComponent } from './timesheet.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from '../core/shared.module';
+import { MatCardModule } from '@angular/material';
 
 const routes = [
   {
@@ -16,6 +17,7 @@ const routes = [
   imports: [
     CommonModule,
     SharedModule,
+    MatCardModule,
     RouterModule.forChild(routes),
     ReactiveFormsModule
   ],
