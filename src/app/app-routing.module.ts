@@ -19,8 +19,8 @@ const routes: Routes = [
     loadChildren: './refund/refund.module#RefundModule'
   },
   {
-    path: 'vocation',
-    loadChildren: './vocation/vocation.module#VocationModule'
+    path: 'vacation',
+    loadChildren: './vacation/vacation.module#VacationModule'
   },
   {
     path: 'tickets',
