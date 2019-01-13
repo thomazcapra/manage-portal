@@ -25,9 +25,6 @@ THE SOFTWARE.
 
 @angular/material/card
 
-@angular/common
-MIT
-
 rxjs
 Apache-2.0
                                Apache License
@@ -260,6 +257,9 @@ THE SOFTWARE.
 
 
 @angular/platform-browser
+MIT
+
+@angular/common
 MIT
 
 tslib
