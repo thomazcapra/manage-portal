@@ -1,12 +1,14 @@
 <div class="form-group">
   <label *ngIf="true">{{ label }}</label>
-  <input
-    [attr.type]="type"
-    class="form-control"
-    aria-describedby="emailHelp"
-    [attr.placeholder]="placeholder"
-  />
-  <small id="emailHelp" class="form-text text-muted"
-    >We'll never share your email with anyone else.</small
-  >
+  <input class="form-control"
+         [attr.type]="type"
+         [attr.max]="max"
+         [attr.min]="min"
+         [attr.maxlength]="maxLength"
+         [attr.minlength]="minLength"
+         [attr.placeholder]="placeholder"
+         [disabled]="isDisabled"
+         (blur)="onTouched && onTouched()"
+         (input)="onChange && onChange($event?.target?.value)"
+         [value]="value">
 </div>

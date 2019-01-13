@@ -1,43 +1,45 @@
 <mat-card>
   <form [formGroup]="form">
     <div class="row">
-      <app-input
-        [placeholder]="'Informe as horas'"
-        [type]="'email'"
-        [label]="'Hora Normal'"
-        class="col-md-6"
-      >
+      <app-input [placeholder]="'Informe as horas'"
+                 [formControlName]="'normalHour'"
+                 [type]="'number'"
+                 [max]="24"
+                 [label]="'Hora Normal'"
+                 class="col-md-6">
       </app-input>
-      <app-input
-        [placeholder]="'Email'"
-        [type]="'email'"
-        [label]="'Hora Extra'"
-        class="col-md-6"
-      >
+      <app-input [placeholder]="'Informe as horas extras'"
+                 [type]="'number'"
+                 [max]="24"
+                 [formControlName]="'extraHour'"
+                 [label]="'Hora Extra'"
+                 class="col-md-6">
       </app-input>
     </div>
     <div class="row">
-      <app-input
-        [placeholder]="'Email'"
-        [type]="'email'"
-        [label]="'Projeto'"
-        class="col-md-12"
-      >
+      <app-input [placeholder]="'Projeto'"
+                 [formControlName]="'project'"
+                 [type]="'text'"
+                 [maxLength]="2"
+                 [label]="'Projeto'"
+                 class="col-md-12">
       </app-input>
-      <app-input
-        [placeholder]="'Email'"
-        [type]="'email'"
-        [label]="'Tarefa'"
-        class="col-md-12"
-      >
+      <app-input [placeholder]="'Tarefa'"
+                 [formControlName]="'task'"
+                 [type]="'text'"
+                 [label]="'Tarefa'"
+                 class="col-md-12">
       </app-input>
-      <app-input
-        [placeholder]="'Email'"
-        [type]="'email'"
-        [label]="'Observações'"
-        class="col-md-12"
-      >
+      <app-input [placeholder]="'Observações'"
+                 [formControlName]="'observations'"
+                 [type]="'text'"
+                 [label]="'Observações'"
+                 class="col-md-12">
       </app-input>
     </div>
   </form>
 </mat-card>
+
+<br>
+
+{{ form.value | json }}
