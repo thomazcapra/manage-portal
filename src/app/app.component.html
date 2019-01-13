@@ -1,24 +1,22 @@
 <div class="main-component">
   <mat-toolbar class="tool-bar">
-    <img class="tool-bar__image" src="assets/img/logobold-devoteam.png" />
+    <img class="tool-bar__image"
+         src="assets/img/logobold-devoteam.png" />
     <span> BOLD Internation <small> by Devoteam </small> </span>
   </mat-toolbar>
   <mat-sidenav-container class="side-nav">
-    <mat-sidenav
-      mode="side"
-      opened
-      class="side-nav__side-bar"
-      [fixedInViewport]="true"
-    >
+    <mat-sidenav mode="side"
+                 opened
+                 class="side-nav__side-bar"
+                 [fixedInViewport]="true">
       <mat-nav-list class="side-nav__menu">
-        <button
-          *ngFor="let link of links; let i = index"
-          [color]="isSelected(i) ? 'primary' : ''"
-          class="side-nav__menu-item"
-          mat-raised-button
-          [routerLink]="link.routerLink"
-        >
-          <mat-icon *ngIf="link.icon" class="mr-3"> {{ link.icon }} </mat-icon>
+        <button *ngFor="let link of links; let i = index"
+                [color]="isSelected(i) ? 'primary' : ''"
+                class="side-nav__menu-item"
+                mat-raised-button
+                [routerLink]="link.routerLink">
+          <mat-icon *ngIf="link.icon"
+                    class="mr-3"> {{ link.icon }} </mat-icon>
           <span> {{ link.description }} </span>
         </button>
       </mat-nav-list>

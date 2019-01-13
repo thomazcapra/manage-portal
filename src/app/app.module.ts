@@ -1,9 +1,10 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
+  MatButtonModule,
   MatIconModule,
   MatListModule,
-  MatButtonModule,
   MatToolbarModule
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './core/shared.module';
-import { CommonModule } from '@angular/common';
 
 const MATERIAL_MODULES = [
   MatListModule,
@@ -32,7 +32,7 @@ const MATERIAL_MODULES = [
     ...MATERIAL_MODULES
   ],
   exports: [...MATERIAL_MODULES],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

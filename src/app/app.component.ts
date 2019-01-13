@@ -1,6 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
-import { ApiService, NavigationService } from '@portal/services';
-import { Subject } from 'rxjs';
+import { LoggerService, NavigationService } from '@portal/services';
 
 interface MenuItem {
   routerLink: string[];
@@ -58,10 +57,10 @@ export class AppComponent implements OnDestroy {
   ];
 
   constructor(
-    private apiService: ApiService,
-    private navigationSerice: NavigationService
+    private navigationService: NavigationService,
+    private loggerService: LoggerService
   ) {
-
+    this.loggerService.log('Mensaggem', this.constructor);
   }
 
   public ngOnDestroy(): void {}
@@ -74,8 +73,8 @@ export class AppComponent implements OnDestroy {
    */
   public isSelected(index: number): boolean {
     const url =
-      this.navigationSerice.currentUrl &&
-      this.navigationSerice.currentUrl.replace('/', '');
+      this.navigationService.currentUrl &&
+      this.navigationService.currentUrl.replace('/', '');
     return this.links[index].routerLink.includes(url);
   }
 }
