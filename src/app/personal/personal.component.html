@@ -1,3 +1,22 @@
 <mat-card>
-  <form [formGroup]="form"></form>
+  <form [formGroup]="form">
+    <h2> Identificação </h2>
+    <div class="row">
+      <app-input [placeholder]="'Informe as horas'"
+                 [formControlName]="''"
+                 [type]="'number'"
+                 [max]="24"
+                 [label]="'Hora Normal'"
+                 class="col-md-6">
+      </app-input>
+      <app-input [placeholder]="'Informe as horas extras'"
+                 [type]="'number'"
+                 [max]="24"
+                 [formControlName]="''"
+                 [label]="'Hora Extra'"
+                 class="col-md-6">
+      </app-input>
+    </div>
+
+  </form>
 </mat-card>

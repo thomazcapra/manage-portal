@@ -13,6 +13,9 @@ interface MenuItem {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
+  /**
+   * List of links to be shown.
+   */
   public links = <MenuItem[]>[
     {
       routerLink: ['home'],
@@ -60,7 +63,7 @@ export class AppComponent implements OnDestroy {
     private navigationService: NavigationService,
     private loggerService: LoggerService
   ) {
-    this.loggerService.log('Mensaggem', this.constructor);
+    this.loggerService.log('mensagem', this.constructor);
   }
 
   public ngOnDestroy(): void {}
