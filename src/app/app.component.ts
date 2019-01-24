@@ -14,7 +14,9 @@ interface MenuItem {
 })
 export class AppComponent implements OnDestroy {
   /**
-   * List of links to be shown.
+   * List of links to be shown,
+   * each link must have its desciption
+   * icon and router link.
    */
   public links = <MenuItem[]>[
     {

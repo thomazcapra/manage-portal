@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "deploy": "ng build --prod --base-href https://thomazcapra.github.io/manage-portal/ && ngh",
+    "coverage": "ng test --code-coverage",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

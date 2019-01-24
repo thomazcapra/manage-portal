@@ -1,8 +1,7 @@
 /* tslint:disable:no-unused-variable */
+import { DatePipe } from '@angular/common';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { FormsModule, ControlContainer } from '@angular/forms';
 import { InputComponent } from './input.component';
 
 describe('InputComponent', () => {
@@ -11,9 +10,15 @@ describe('InputComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ InputComponent ]
-    })
-    .compileComponents();
+      imports: [
+        FormsModule
+      ],
+      declarations: [InputComponent],
+      providers: [
+        DatePipe,
+        ControlContainer
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
